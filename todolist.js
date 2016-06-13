@@ -1,9 +1,9 @@
 var demo = new Vue({
     el: '#demo',
     data: {
-      list:localStorage.todoList == ''?[]:JSON.parse(localStorage.todoList),
+      list:localStorage.todoList == undefined || localStorage.todoList == ''?[]:JSON.parse(localStorage.todoList),
       sth:'',
-      doneList:localStorage.doneList == ''?[]:JSON.parse(localStorage.doneList)
+      doneList:localStorage.doneList == undefined || localStorage.doneList == ''?[]:JSON.parse(localStorage.doneList)
     },
     methods:{
       insure:function(ev){  //add sth
