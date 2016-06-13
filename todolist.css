@@ -1,27 +1,37 @@
 header,body,label,input,h2,span,ol,li{margin: 0;padding: 0;}
-body{
+body,html{
   background-color: #CCFF99;
+  width: 100%;height: 100%;overflow: hidden;
 }
 ol li{
   list-style: none;
 }
 html{font-size: 62.5%;}
 header{
-  height: 5rem;
+  height: 20%;
   width: 100%;
   background-color: black;
   color:white;
   text-align: center;
-  line-height: 5rem;
-  margin-bottom: 2rem;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 640px) {
+  header{
+    height: 30%;
+  }
+  header label{
+    font-size: 1.6rem !important;
+  }
 }
 header label{
   font-size: 2.4rem;
+  width: 20%;display: inline-block;
   vertical-align: middle;
 }
 header input{
   border: none;
-  width: 30rem;
+  width: 50%;
   height: 2.4rem;
   vertical-align: middle;
   border-radius: 0.2rem;
@@ -30,14 +40,14 @@ header input:focus{
   box-shadow: 0px 0px 10px white;
 }
 ol,h2{
-  width: 50rem;margin: 0 auto;
+  width: 70%;margin: 0 auto;
 }
 ol li{margin-left:2rem; 
   margin-top: 0.5rem;
   height: 3rem;
   font-size: 1.6rem;
   line-height: 3rem;
-  width: 50rem;
+  width: 70%;
   color: black;
   background-color: white;
   border-radius: 0.6rem ;
