@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ 	<head>
+  		<title> todolist </title>
+  		<meta charset="utf-8">      
+	</head>
+  <link rel="stylesheet" type="text/css" href="todolist.css">
+  <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
+	<body>
+    <div id="demo">
+
+        <header>
+          <label for="title" >TodoList</label>
+          <input type ="text" id="title" placeholder="todosomething" v-model="sth" v-on:keydown='insure'>
+        </header>
+        <h2>正在处理的事件：</h2>
+        <ol id ="todo">
+          <li v-for="item in list" track-by="title"><span class="index">{{ $index }}</span><input type="checkbox" class="check" v-on:click='done'/><label>{{ item.title }}</label><span class="cancle" v-on:click='cancle'></span></li>
+        </ol>
+        <h2>已完成的事件：</h2>
+        <ol id="havedone">
+          <li v-for="item in doneList">{{ item.done }}</li>
+        </ol> 
+
+    </div>
+       
+    <script type="text/javascript" src = "todolist.js"></script>
+    
+</html>

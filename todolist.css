@@ -1,0 +1,62 @@
+header,body,label,input,h2,span,ol,li{margin: 0;padding: 0;}
+body{
+  background-color: #CCFF99;
+}
+ol li{
+  list-style: none;
+}
+html{font-size: 62.5%;}
+header{
+  height: 5rem;
+  width: 100%;
+  background-color: black;
+  color:white;
+  text-align: center;
+  line-height: 5rem;
+  margin-bottom: 2rem;
+}
+header label{
+  font-size: 2.4rem;
+  vertical-align: middle;
+}
+header input{
+  border: none;
+  width: 30rem;
+  height: 2.4rem;
+  vertical-align: middle;
+  border-radius: 0.2rem;
+}
+header input:focus{
+  box-shadow: 0px 0px 10px white;
+}
+ol,h2{
+  width: 50rem;margin: 0 auto;
+}
+ol li{margin-left:2rem; 
+  margin-top: 0.5rem;
+  height: 3rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  width: 50rem;
+  color: black;
+  background-color: white;
+  border-radius: 0.6rem ;
+  padding: 0 1rem;
+  position: relative;
+}
+.index{
+  display: none;
+}
+.check{
+  margin: 0 4px;
+}
+.cancle{
+  background-color: gray;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  vertical-align: middle;
+  position: absolute;
+  right: 1rem;top: 50%;margin-top: -1rem;
+}
