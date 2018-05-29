@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import logo from "../logo.svg";
 import Clock from "../component/clock";
 import Updatetst from "../component/update_test";
+import CounterWrap from "../component/counter";
+import reducer from "../redux/reducer";
+import { createStore } from "redux";
 import "../css/App.css";
 const ele = <h1>hello,everyone</h1>;
-
+let store = createStore(reducer);
 class App extends Component {
   constructor(props) {
     super(props);
@@ -27,8 +30,11 @@ class App extends Component {
           done: "not"
         }
       ],
-      doneList: []
+      doneList: [],
+      msg: "from parent",
+      num: 0
     };
+    this.handleCounter = this.handleCounter.bind(this);
   }
   showTitle(arg) {
     let arr = this.state.list;
@@ -38,6 +44,20 @@ class App extends Component {
       }
     });
     this.setState({ list: arr });
+  }
+  handleCounter(arg) {
+    let _num = this.state.num;
+    if (arg == "increment") {
+      this.setState({
+        num: ++_num
+      });
+      // store.dispatch({ type: "INCREMENT" });
+    } else if (arg == "decrement") {
+      this.setState({
+        num: --_num
+      });
+      // store.dispatch({ type: "DECREMENT" });
+    }
   }
   render() {
     return (
@@ -91,6 +111,8 @@ class App extends Component {
           <div />
           <div />
         </div>
+        <CounterWrap num={this.state.num} onClickbtn={this.handleCounter} />
+        <div id="tst" />
       </div>
     );
   }
