@@ -8,7 +8,9 @@ class CounterWrap extends Component {
     super(props);
     this.handleTemp = this.handleTemp.bind(this);
   }
-  componentDidMount() {}
+  componentDidMount() {
+    console.log("this is child");
+  }
   handleTemp(e) {
     // 接受父组件传递过来的函数，调用并传值
     var action = e.target.getAttribute("data-action");

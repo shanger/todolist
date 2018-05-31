@@ -45,6 +45,9 @@ class App extends Component {
     });
     this.setState({ list: arr });
   }
+  componentDidMount() {
+    console.log("this is parent");
+  }
   handleCounter(arg) {
     let _num = this.state.num;
     if (arg == "increment") {
